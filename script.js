@@ -147,6 +147,13 @@ function highlightButton(color, isSequence) {
         button.style.opacity = 0.5;
         setTimeout(() => button.style.opacity = 1, 500);
     }
+
+    // Smoothly scroll to the highlighted button
+    button.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center', // Align vertically to the center of the view
+        inline: 'center' // Align horizontally to the center of the view
+    });
 }
 
 function updateGameBoard() {
